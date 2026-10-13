@@ -67,23 +67,21 @@ python -m streamlit run dashboard.py
 ## Project Structure
 
 ```
-SRF-Equity-Research/
-|-- src/
-|   |-- __init__.py
-|   |-- config.py              # All assumptions, tickers, DCF scenarios
-|   |-- data_fetcher.py        # Yahoo Finance + fallback mock data
-|   |-- financial_analysis.py  # Ratio calculations, growth metrics
-|   |-- dcf_model.py           # 3-scenario DCF with stage-dependent capex
-|   |-- excel_export.py        # 4-sheet formatted Excel workbook
-|   `-- report_generator.py    # 6-page PDF research note
-|-- outputs/
-|   |-- SRF_Equity_Research_FINAL.xlsx
-|   `-- SRF_Research_Note_FINAL.pdf
+srf-equity-research/
 |-- .gitignore
-|-- dashboard.py               # Streamlit interactive dashboard
 |-- README.md
 |-- requirements.txt
-`-- run.py                     # CLI runner (data -> analysis -> Excel + PDF)
+|-- run.py                     # CLI runner (data -> analysis -> Excel + PDF)
+|-- dashboard.py               # Streamlit interactive dashboard
+|-- __init__.py
+|-- config.py                  # All assumptions, tickers, DCF scenarios
+|-- data_fetcher.py            # Yahoo Finance + fallback mock data
+|-- financial_analysis.py      # Ratio calculations, growth metrics
+|-- dcf_model.py               # 3-scenario DCF with stage-dependent capex
+|-- excel_export.py            # 4-sheet formatted Excel workbook
+|-- report_generator.py        # 6-page PDF research note
+|-- SRF_Equity_Research_FINAL.xlsx
+`-- SRF_Research_Note_FINAL.pdf
 ```
 
 ## What I Learned
